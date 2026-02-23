@@ -1,35 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" prefHeight="270.0" prefWidth="310.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.laba_1.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
-   <children>
-      <HBox prefHeight="59.0" prefWidth="270.0">
-         <children>
-            <Label text="Рубли" />
-            <TextField fx:id="tf_input_rus" />
-            <Button fx:id="bt_convert" mnemonicParsing="false" onAction="#click_on_convert" text="convert" />
-         </children></HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0">
-         <children>
-            <VBox prefHeight="200.0" prefWidth="100.0">
-               <children>
-                  <Label text="Доллары" />
-                  <TextField fx:id="tf_usd" />
-               </children>
-            </VBox>
-            <VBox prefHeight="200.0" prefWidth="100.0">
-               <children>
-                  <Label text="Евро" />
-                  <TextField fx:id="tf_erd" />
-               </children>
-            </VBox>
-         </children></HBox>
-      <Label fx:id="lb_result" text="вывод" />
-   </children>
-</VBox>
+<AnchorPane prefHeight="250.0" prefWidth="477.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.laba_1.HelloController">
+   <Label layoutX="261.0" layoutY="22.0" text="История конвертаций:" />
+   <Label fx:id="lb_out_history" layoutX="261.0" layoutY="50.0" prefHeight="177.0" prefWidth="208.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-padding: 5;" text="пусто" wrapText="true" />
+   <Label layoutX="21.0" layoutY="36.0" text="Курс евро:" />
+   <TextField fx:id="tf_erd" layoutX="101.0" layoutY="31.0" prefWidth="100.0" />
+   <Label layoutX="21.0" layoutY="76.0" text="Курс доллара:" />
+   <TextField fx:id="tf_usd" layoutX="101.0" layoutY="71.0" prefWidth="100.0" />
+   <Label layoutX="23.0" layoutY="155.0" text="Рубли:" />
+   <TextField fx:id="tf_input_rus" layoutX="73.0" layoutY="150.0" prefWidth="100.0" />
+   <Button fx:id="bt_convert" layoutX="14.0" layoutY="200.0" onAction="#click_on_convert" text="Конвертировать" style=" -fx-background-color: #90EE90; -fx-text-fill: white; -fx-font-weight: bold;" />
+   <Button layoutX="135.0" layoutY="200.0" onAction="#clearHistory" text="Очистить" style="-fx-background-color: #F08080; -fx-text-fill: white; -fx-font-weight: bold;"/>
+</AnchorPane>
